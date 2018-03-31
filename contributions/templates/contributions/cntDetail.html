@@ -1,0 +1,13 @@
+{% extends "index/basic.html" %}
+{% block content %}
+{% include "index/snippets/headerCont.html" %}
+
+{% load staticfiles %}
+<div class="lightboxBG">
+    <image src="/static/photos/posts/{{ post.titleImg }}" class="imageBigH"/>
+    <h2 class="postTitle">{{ post.title }}</h2>
+    <div class="postFrame">
+        {{ post.body|safe|linebreaks }}
+    </div>
+</div>
+{% endblock %}

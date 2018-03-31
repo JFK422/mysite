@@ -1,0 +1,25 @@
+{% extends "index/basic.html" %}
+{% block content %}
+{% include "index/snippets/headerPhoto.html" %}
+{% load staticfiles %}
+<div class="lightboxBG">
+    <image src="/static/photos/camera/{{ pic.path }}" {% if pic.horizontal %} class="imageBigH" {% else %} class="imageBigV" {% endif %}/>
+    <a href="/static/photos/camera/{{ pic.path }}" download="{{ pic.title }}" class="downloadBtn">
+        <div class="download">Herunterladen</div>
+    </a>
+    <ul class="imgDetailsList">
+        <li class="idlitem">Aufnahmedatum: {{ pic.date }}</li>
+        <li class="idlitem">Dimensionen: {{ pic.dimensions }}</li>
+        <li class="idlitem">Breitengrad: {{ pic.latitude }}°</li>
+        <li class="idlitem">Längengrad: {{ pic.longitude }}°</li>
+        <li class="idlitem">Blitz: {%  if pic.flash %}Ja{% else %}Nein{% endif %}</li>
+        <li class="idlitem">Brennweite: {{ pic.focalLength }}</li>
+        <li class="idlitem">Weissabgleich: {{ pic.whiteBalance }}</li>
+        <li class="idlitem">Blende: f/{{ pic.aperture }}</li>
+        <li class="idlitem">Verschlusszeit: {{ pic.exposure }}</li>
+        <li class="idlitem">ISO: {{ pic.iso }}</li>
+        <li class="idlitem">Kamera: {{ pic.cameraModel }}</li>
+        <li class="idlitem">Bearbeitet: {%  if pic.editedParams %}Ja{% else %}Nein{% endif %}</li>
+    </ul>
+</div>
+{% endblock %}

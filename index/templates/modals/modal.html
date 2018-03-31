@@ -1,0 +1,23 @@
+<script lang="javascript">
+//Too lazy to figure out how to get this to work with a .js file within Django!
+//Legal
+var mLegal = document.getElementById("mLegal");
+var mLegalTrigger = document.getElementById("legalTrigger");
+var mLClose = document.getElementsByClassName("closeL")[0];
+mLegalTrigger.onclick = function(){mLegal.style.display = "block";}
+mLClose.onclick = function(){mLegal.style.display = "none";}
+
+//About
+var mAbout = document.getElementById("mAbout");
+var mAboutTrigger = document.getElementById("aboutTrigger");
+var mAClose = document.getElementsByClassName("closeA")[0];
+mAboutTrigger.onclick = function(){mAbout.style.display = "block";}
+mAClose.onclick = function(){mAbout.style.display = "none";}
+
+//Resources
+var mResources = document.getElementById("mResources");
+var mResourcesTrigger = document.getElementById("resourcesTrigger");
+var mRClose = document.getElementsByClassName("closeR")[0];
+mResourcesTrigger.onclick = function(){mResources.style.display = "block";}
+mRClose.onclick = function(){mResources.style.display = "none";}
+</script>

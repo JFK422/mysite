@@ -1,0 +1,8 @@
+{% block content %}
+<ul class="navbar">
+	<li class="hLi"><a {% if section == 'home' %} class="hLiTextActive" {% else %} class="hLiText" href="/"{% endif %}>Home</a></li>
+	<li class="hLi"><a {% if section == 'photos' %} class="hLiTextActive" {% else %} class="hLiText" href="/photos"{% endif %}>Fotos</a></li>
+	<li class="hLi"><a {% if section == 'projects' %} class="hLiTextActive" {% else %} class="hLiText" href="/contributions"{% endif %}>Beiträge</a></li>
+	<li class="hLi"><a {% if section == 'contact' %} class="hLiTextActive" {% else %} class="hLiText" href="/contact"{% endif %}>Kontakt</a></li>
+</ul> 
+{% endblock %}

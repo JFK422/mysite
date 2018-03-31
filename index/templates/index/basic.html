@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Kenneth Mathis</title>
+	<meta charset="utf-8"/>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'indexStatic/mainStyle.css' %}"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/png" href="{% static 'img/misc/favicon.png' %}"/>
+</head>
+
+<body>
+    <div>
+	   {% block content %}
+	   {% endblock %}	
+	</div>
+</body>
+
+</html>
