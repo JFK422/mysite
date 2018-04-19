@@ -4,16 +4,20 @@
 {% load staticfiles %}
 <div class="photoContainer">
     {% for post in object_list %}
-        <div class="photoElement" id="Post{{ post.id }}">
-            <a href="/contributions/{{ post.id }}">
-                <div class="imageHead">
-                    <image src="/static/photos/posts/{{ post.titleImg }}" class="image"/>
-                </div>
-                <div class="imgSubtext">
-                    <p class="subtext">{{ post.title }}</p>
-                </div>
-            </a>
-        </div>
+        {% if post.beta %}
+            <div></div>
+        {% else %}
+            <div class="photoElement" id="Post{{ post.id }}">
+                <a href="/contributions/{{ post.id }}">
+                    <div class="imageHead">
+                        <image src="/static/photos/posts/{{ post.titleImg }}" class="image"/>
+                    </div>
+                    <div class="imgSubtext">
+                        <p class="subtext">{{ post.title }}</p>
+                    </div>
+                </a>
+            </div>
+        {% endif %}
     {% endfor %}
 </div>
 {% endblock %}

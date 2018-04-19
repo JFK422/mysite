@@ -45,7 +45,7 @@
 }
 
 .footer{
-    width: 260px;
+    width: 280px;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 2%;
@@ -168,11 +168,13 @@
     font-family: "Roboto";
 }
 
+/*For horizonztal images in the lightbox*/
 .imageBigH{
     width: 1000px;
     box-shadow: 5px 5px 3px #414141;
 }
-
+/*same but for vertical*/
+/*has size issues that need to be fixed!*/
 .imageBigV{
     width: 1000px;
     box-shadow: 5px 5px 3px #414141;
@@ -197,15 +199,19 @@
 }
 
 .idlitem{
-    margin: 2%;
+    margin: 3%;
+    font-family: "Comfortaa";
+    font-size: 25px;
 }
 
+/*css to the download div*/
 .download{
     margin-top: 1%;
     background-color: #330033;
     padding: 1.5%;
 }
 
+/*the actual download button*/
 .downloadBtn{
     background-color: #330033;
     color: #f9f9f9;
@@ -213,6 +219,7 @@
     font-size: 25px;
 }
 
+/*the smallprint in the resources modal*/
 .smallStuff{
     font-family: "Roboto";
     font-size: 8px;
@@ -241,6 +248,12 @@
     padding: 2%;
 }
 
+.ulLegal{
+    color: #414141;
+    font-family: "Roboto";
+    list-style-type: square;
+}
+
 body{
     margin: 0;
     background-color: #f9f9f9;
@@ -250,7 +263,7 @@ a{
     text-decoration: none;
 }
 
-h2{
+h2, h3{
     color: #343434;
     font-family: "Comfortaa";
 }
