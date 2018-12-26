@@ -85,7 +85,7 @@
 }
 
 .aboutText{
-    margin: 0% 20% 5% 20%;
+    margin: 0% 20% 2% 20%;
     text-align: center;
     color: #414141;
     font-size: 100%;
@@ -95,26 +95,39 @@
 
 .photoContainer{
     width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     margin-top: 1%;
     margin-bottom: 1%;
-    margin-left: auto;
-    margin-right: auto;
+    align-items: flex-start;
+    margin-right: 3%;
+    margin-left: 3%;
 }
 
 .image{
     width: 500px;
-    box-shadow: 0px 0px 5px 0px #000000;
+    max-width: 100%;
+    border-color: #414141;
+    border-width: 3px;
+    border-style: solid;
+    padding: 2px;
+}
+
+.imageVert{
+    height: 333px;
+    max-width: 100%;
+    border-color: #414141;
+    border-width: 3px;
+    border-style: solid;
+    padding: 2px;
 }
 
 .photoElement{
     width: 500px;
-    float: left;
-    display: block;
-    margin-left: 2%;
     margin-bottom: 2%;
-    border-color: #414141;
-    border-width: 3px;
-    border-style: solid;
+    margin: 5px;
+    margin-bottom: 2%;
 }
 
 .subtext{
@@ -127,15 +140,15 @@
 
  /* The Modal background */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
+    overflow: auto;
+    background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.6);
 }
 
@@ -176,13 +189,14 @@
 /*same but for vertical*/
 /*has size issues that need to be fixed!*/
 .imageBigV{
-    width: 1000px;
+    height: 1000px;
     box-shadow: 5px 5px 3px #414141;
     /*transform: rotate(90deg);*/
 }
 
 .lightboxBG{
     margin-top: 2%;
+    max-width: 100%;
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
@@ -195,13 +209,14 @@
     font-family: "Roboto";
     text-align: left;
     font-size: 20px;
-    border: solid 5px #330033;
+    border: solid 5px #414141;
 }
 
 .idlitem{
     margin: 3%;
     font-family: "Comfortaa";
     font-size: 25px;
+    overflow: hidden;
 }
 
 /*css to the download div*/
@@ -254,6 +269,34 @@
     list-style-type: square;
 }
 
+.frstLinkFrame{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.firstLink{
+    background-color: #330033;
+    color: #f9f9f9;
+    text-align: center;
+    padding: 14px 16px;
+    font-family: 'Comfortaa';
+    margin: 10px;
+    width: 100px;
+    box-shadow: 2px 2px 2px #414141;
+}
+
+.firstLink:hover{
+    background-color: #280028;
+    color: #f9f9f9;
+    text-align: center;
+    padding: 14px 16px;
+    font-family: 'Comfortaa';
+    width: 100px;
+    box-shadow: 2px 2px 2px #414141;
+}
+
 body{
     margin: 0;
     background-color: #f9f9f9;
@@ -290,7 +333,8 @@ h2, h3{
 
 @media screen and (max-width: 600px){
     .hLi {float: none;}
-    .parallaxBG {background-attachment: scroll;}
+    .parallaxBG {background-attachment: scroll;
+        box-shadow: 2px 2px 2px #414141;}
     .imageBigH {width: 500px;}
     .imageBigV {width: 500px;}
     .lightboxBG {width: 500px;}

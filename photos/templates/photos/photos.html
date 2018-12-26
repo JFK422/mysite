@@ -7,10 +7,11 @@
         <div class="photoElement" id="photo{{ pic.id }}">
             <a href="/photos/{{ pic.id }}">
                 <div class="imageHead">
-                    <image src="/static/photos/camera/{{ pic.path }}" class="image"/>
-                </div>
-                <div class="imgSubtext">
-                    <p class="subtext">{{ pic.title }}</p>
+                    {%  if pic.horizontal %}
+                        <image src="/static/photos/compCamera/{{ pic.img }}" class="image"/>
+                    {% else %}
+                        <image src="/static/photos/compCamera/{{ pic.img }}" class="imageVert"/>
+                    {% endif %}
                 </div>
             </a>
         </div>
