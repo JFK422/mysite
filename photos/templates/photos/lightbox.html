@@ -3,7 +3,7 @@
 {% include "index/snippets/headerPhoto.html" %}
 {% load staticfiles %}
 <div class="lightboxBG">
-    <image src="/static/photos/camera/{{ pic.path }}" {% if pic.horizontal %} class="imageBigH" {% else %} class="imageBigV" {% endif %}/>
+    <image src="/static/photos/compCamera/{{ pic.img }}" {% if pic.horizontal %} class="imageBigH" {% else %} class="imageBigV" {% endif %}/>
     <a href="/static/photos/camera/{{ pic.path }}" download="{{ pic.title }}" class="downloadBtn">
         <div class="download">Herunterladen</div>
     </a>
